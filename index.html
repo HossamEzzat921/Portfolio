@@ -161,7 +161,7 @@
       <!-- Aside End-->
       <!--Main Content Start-->
       <div class="main-content">
-        <!--login section start--> 
+        <!--login section start-->
         <section class="login section" id="login">
           <div class="container">
             <div class="row">
@@ -332,7 +332,25 @@
                   volutpat feugiat placerat lobortis. Natoque rutrum semper sed
                   suspendisse nunc lectus.
                 </p>
-                <a href="#" class="btn">Download CV</a>
+                <!-- زر رفع الملف -->
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  onclick="document.getElementById('fileInput').click()"
+                  >Upload CV</a
+                >
+
+                <!-- عنصر رفع الملف مخفي -->
+                <input
+                  type="file"
+                  id="fileInput"
+                  style="display: none"
+                  accept="application/pdf"
+                  onchange="handlePDFUpload(event)"
+                />
+
+                <!-- منطقة لعرض ملف PDF -->
+                <div id="pdfDisplayArea" style="margin-top: 20px"></div>
               </div>
               <div class="home-img padd-15">
                 <img src="images/photo.png" alt="profile photo" />

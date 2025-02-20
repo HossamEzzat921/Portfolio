@@ -51,6 +51,29 @@ function updateNav(element) {
         }
     }
 }
+function handlePDFUpload(event) {
+    const file = event.target.files[0];
+    if (file && file.type === 'application/pdf') {
+        const pdfDisplayArea = document.getElementById('pdfDisplayArea');
+        pdfDisplayArea.innerHTML = ''; // تنظيف منطقة العرض
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const pdfElement = document.createElement('embed');
+            pdfElement.src = e.target.result;
+            pdfElement.type = 'application/pdf';
+            pdfElement.width = '100%';
+            pdfElement.height = '600px'; // يمكنك تعديل هذا الحجم حسب الحاجة
+            pdfDisplayArea.appendChild(pdfElement);
+        };
+
+        // قراءة الملف كـ Data URL لعرضه
+        reader.readAsDataURL(file);
+    } else {
+        alert('Please select a valid PDF file.');
+    }
+}
+
 document.querySelector(".hire-me").addEventListener("click", function () {
     const sectionIndex = this.getAttribute("data-section-index");
     showSection(this);
@@ -65,6 +88,14 @@ document.querySelector(".order").addEventListener("click", function () {
     removeBackSection();
     addBackSection(sectionIndex);
 })
+function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+        // يمكنك هنا كتابة كود لمعالجة الملف المرفوع، مثل رفعه إلى السيرفر
+        alert(`File selected: ${file.name}`);
+    }
+}
+
 document.querySelector(".log-link").addEventListener("click", function () {
     const sectionIndex = this.getAttribute("data-section-index");
     showSection(this);
