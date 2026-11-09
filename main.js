@@ -115,24 +115,24 @@
 
   /* ---------- Skills with receipts ---------- */
   var SKILLS = [
-    ["React", ["wahy", "kova", "lalola", "learnhub", "archive"]],
-    ["TypeScript", ["wahy", "kova", "lalola"]],
-    ["TanStack Start", ["wahy", "kova", "lalola"]],
-    ["Supabase / Postgres", ["wahy", "kova", "lalola"]],
-    ["Auth & roles", ["wahy", "kova", "lalola", "learnhub"]],
-    ["Admin dashboards", ["wahy", "kova", "lalola", "learnhub"]],
-    ["Payments & checkout", ["wahy", "kova", "lalola"]],
+    ["React", ["wahy", "kova", "learnhub", "archive"]],
+    ["TypeScript", ["wahy", "kova"]],
+    ["TanStack Start", ["wahy", "kova"]],
+    ["Supabase / Postgres", ["wahy", "kova"]],
+    ["Auth & roles", ["wahy", "kova", "learnhub"]],
+    ["Admin dashboards", ["wahy", "kova", "learnhub"]],
+    ["Payments & checkout", ["wahy", "kova"]],
     ["Booking & scheduling", ["wahy"]],
     ["In-app chat", ["wahy"]],
-    ["Shipping & orders", ["kova", "lalola"]],
+    ["Shipping & orders", ["kova"]],
     ["Node & Express", ["learnhub"]],
     ["MongoDB", ["learnhub"]],
     ["REST APIs", ["learnhub", "archive"]],
-    ["Tailwind CSS", ["wahy", "kova", "lalola", "learnhub", "archive"]],
+    ["Tailwind CSS", ["wahy", "kova", "learnhub", "archive"]],
     ["Vue.js", ["archive"]],
     ["Firebase", ["archive"]]
   ];
-  var NAMES = { wahy: "WAHY", kova: "KOVA", lalola: "Lalola", learnhub: "LearnHub", archive: "the archive" };
+  var NAMES = { wahy: "WAHY", kova: "KOVA", learnhub: "LearnHub", archive: "the archive" };
   var wrap = document.getElementById("skills");
   var matrix = wrap.closest(".matrix");
   var proofs = document.querySelectorAll(".proof");
