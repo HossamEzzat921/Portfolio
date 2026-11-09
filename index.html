@@ -1,324 +1,446 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="dark">
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl8F5+u4mHkCUAqgCN1cFQKtR+Oz+T4IuLW5IT+brZEZsLFm++aCMlX6bJQZ4/AKX9YDV4T5V5bMg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Hossam Ezzat — Product Engineer</title>
+  <meta name="description"
+    content="Hossam Ezzat — front-end & full-stack product engineer in Cairo. I design and build platforms that real businesses run on: academies, storefronts, dashboards." />
+  <meta name="theme-color" content="#0f0e0c" />
+  <meta property="og:title" content="Hossam Ezzat — Product Engineer" />
+  <meta property="og:description"
+    content="Platforms, not pages. Case studies: WAHY Academy, KOVA, Lalola, LearnHub." />
+  <meta property="og:image" content="./assets/images/work/wahy.webp" />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff5a1f'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='30' fill='%230f0e0c'%3EHE%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script>
+    try { var t = localStorage.getItem('he-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) { }
+  </script>
 </head>
 
 <body>
-  <header class="flex px-14 py-4 text-black text-lg justify-between align-center">
-    <h1 class="">Hossam Ezzat</h1>
-    <nav>
-      <ul class="flex gap-12 font-mono cursor-pointer">
-        <li><a href="#about" class="hover:text-slate-700 transition-colors duration-300 scroll-smooth">About</a></li>
-        <li><a href="#skills" class="scroll-smooth hover:text-slate-700 transition-colors duration-300">Skills</a></li>
-        <li><a href="#projects" class="hover:text-slate-700 transition-colors duration-300">Projects</a></li>
-        <li><a href="#contact" class="hover:text-slate-700 transition-colors duration-300">Contact</a></li>
-      </ul>
+  <a class="skip" href="#work">Skip to work</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="topbar">
+    <a href="#top" class="mark" aria-label="Hossam Ezzat — home">
+      <span class="mark__latin">HE</span><span class="mark__ar" lang="ar">ح</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#work"><i>01</i>Work</a>
+      <a href="#capabilities"><i>02</i>Capabilities</a>
+      <a href="#log"><i>03</i>Build log</a>
+      <a href="#contact"><i>04</i>Contact</a>
     </nav>
+    <div class="topbar__meta">
+      <span class="clock" title="Local time in Cairo"><span class="dot"></span>Cairo <b id="clock">--:--</b></span>
+      <button class="theme" id="themeToggle" aria-label="Toggle light and dark theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor" />
+        </svg>
+      </button>
+      <button class="burger" id="burger" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
-  <section id="avail" class="text-center flex flex-col justify-center items-center my-10">
-    <p class="uppercase font-mono text-gray-500 border-1 rounded-2xl font-light p-2 w-fit shadow-lg">Available for
-      opportunities</p>
-    <div class="my-5 w-72 h-72 place-self-center aspect-video">
-      <img class="rendering-pixelated object-cover w-full h-full rounded-full" src="./assets/images/profile2.webp"
-        alt="Profile Picture" />
-    </div>
-    <h1 class="text-7xl font-bold font-serif mb-5">Front-end developer</h1>
-    <p class="text-gray-600">
-      Crafting beautiful, functional, and user-centric digital <br />
-      experiences with attention to detail and modern technologies
-    </p>
-    <div class="flex justify-center gap-4 mt-14 my-5">
-      <button class="text-center w-40 h-9 bg-slate-950 hover:bg-slate-800 text-white rounded-md">View My Work</button>
-      <button class="text-center w-40 h-9 bg-slate-100 rounded-md text-black border-collapse shadow-lg transition">Get
-        In
-        Touch</button>
-    </div>
-    <div class="place-self-center animate-bounce cursor-pointer inset-3 mt-5">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-        class="lucide lucide-arrow-down w-5 h-5 text-muted-foreground">
-        <path d="M12 5v14"></path>
-        <path d="m19 12-7 7-7-7"></path>
-      </svg>
-    </div>
-    <div class="flex gap-8 justify-center mt-4">
-      <a href="https://github.com/HossamEzzat921" target="_blank"
-        class="text-gray-800 hover:text-black transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-github w-5 h-5">
-          <path
-            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-          </path>
-          <path d="M9 18c-4.51 2-5-2-7-2"></path>
-        </svg>
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__ar" lang="ar" aria-hidden="true">حسام عزت</div>
 
-      </a>
-      <a href="https://www.linkedin.com/in/hossamezzat115" target="_blank"
-        class="text-gray-600 hover:text-gray-800 transition"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-          <rect width="4" height="12" x="2" y="9"></rect>
-          <circle cx="4" cy="4" r="2"></circle>
-        </svg></a>
-      <a href="hossamezzat921@gmail.com" target="_blank" class="text-gray-600 hover:text-gray-800 transition"><svg
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-mail w-5 h-5">
-          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-        </svg></a>
-    </div>
-  </section>
-
-
-  <section id="about" class="flex bg-slate-50 flex-col justify-center items-center my-20 gap-4 text-center py-20">
-    <h1 class="text-6xl font-medium">About Me</h1>
-    <p class="text-gray-5-00 font-light">
-      Passionate about creating meaningful digital experiences
-    </p>
-    <p class="w-2/3 bg-white mt-10 text-gray-600 border border-gray-300 shadow-lg p-10 rounded-md">
-      I'm Hossam Ezzat, a front-end developer dedicated to crafting beautiful and functional web experiences. With a
-      keen
-      eye for design and a strong foundation in modern web technologies, I strive to bring ideas to life through clean,
-      efficient code and user-centric design principles. My goal is to create websites that not only look great but also
-      provide seamless usability across all devices.
-  </section>
-
-  <section id="skills" class="py-20 bg-slate-100">
-    <h2 class="text-4xl font-medium text-center mb-4">Skills & Expertise</h2>
-    <p class="text-gray-600 px-8 text-center mb-16">A comprehensive skill set built through years of dedicated practice
-      and real-world projects</p>
-
-    <div class="flex justify-center gap-8 flex-wrap px-8">
-      <!-- Frontend Development -->
-      <div
-        class="bg-white border border-gray-100 hover:shadow-2xl hover:border hover:border-gray-300 p-8 rounded-lg w-80 text-center transition duration-500">
-        <div class="flex justify-center mb-6">
-          <div class="bg-gray-100 p-4 rounded-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
-        <ul class="text-gray-600 space-y-3">
-          <li>React & Next.js</li>
-          <li>TypeScript</li>
-          <li>Tailwind CSS</li>
-          <li>Motion & Animation</li>
-        </ul>
+      <div class="hero__meta reveal">
+        <span class="pill"><span class="dot dot--live"></span>Available for new work — 2026</span>
+        <span class="mono">Front-end &amp; full-stack product engineer · Cairo, EG</span>
       </div>
 
-      <!-- Backend Development -->
-      <div
-        class="bg-white border border-gray-100 hover:shadow-2xl hover:border hover:border-gray-300 p-8 rounded-lg w-80 text-center transition duration-500">
-        <div class="flex justify-center mb-6">
-          <div class="bg-gray-100 p-4 rounded-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
-              <path d="M3 12a9 3 0 0 0 18 0"></path>
-            </svg>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-6">Backend Development</h3>
-        <ul class="text-gray-600 space-y-3">
-          <li>Node.js & Express</li>
-          <li>PostgreSQL & MongoDB</li>
-          <li>REST & GraphQL APIs</li>
-          <li>Authentication</li>
-        </ul>
-      </div>
+      <h1 class="hero__name reveal">
+        <span class="line">Hossam</span>
+        <span class="line line--2">
+          <span class="portrait"><img src="./assets/images/hossam.webp" alt="Portrait of Hossam Ezzat" width="600"
+              height="600" /></span>
+          Ezzat<span class="accent">.</span>
+        </span>
+      </h1>
 
-      <!-- Design & UX -->
-      <div
-        class="bg-white border border-gray-100 hover:shadow-2xl hover:border hover:border-gray-300 p-8 rounded-lg w-80 text-center transition duration-500">
-        <div class="flex justify-center mb-6">
-          <div class="bg-gray-100 p-4 rounded-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="1"></circle>
-              <circle cx="19" cy="12" r="1"></circle>
-              <circle cx="5" cy="12" r="1"></circle>
-            </svg>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold mb-6">Design & UX</h3>
-        <ul class="text-gray-600 space-y-3">
-          <li>UI/UX Design</li>
-          <li>Figma & Sketch</li>
-          <li>Responsive Design</li>
-          <li>Design Systems</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="py-20">
-    <h2 class="text-4xl font-medium text-center mb-4">Featured Projects</h2>
-    <p class="text-gray-600 px-8 text-center mb-16">A curated selection of recent projects showcasing technical
-      expertise and creative problem-solving</p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-6xl mx-auto">
-      <!-- Project Card 1 -->
-      <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-2xl transition group">
-        <img src="./assets/images/image.png" alt="Medisupport"
-          class="w-full h-56 aspect-video object-cover group-hover:scale-105 transition-transform duration-500">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Medisupport</h3>
-          <p class="text-gray-600 mb-4">A healthcare support platform for managing patient information and appointments.
-          </p>
-          <div class="flex gap-2 mb-6 flex-wrap">
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React js</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Laravel</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="https://portfolio-delta-gilt-85.vercel.app"
-              class="flex items-center justify-center w-full bg-slate-950 hover:bg-slate-800 text-white rounded-md py-2 transition">
-              View Live
-            </a>
-            <a href="https://github.com/HossamEzzat921/Medisupport"
-              class="flex items-center justify-center px-6 bg-white border border-gray-300 hover:border-gray-400 rounded-md py-2 transition">
-              Source
-            </a>
-          </div>
+      <div class="hero__bottom">
+        <p class="hero__statement reveal">
+          I build <em>platforms,</em> not pages — the storefronts, academies and dashboards
+          that real businesses open every morning and actually run on.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--solid" href="#work">See the work <span aria-hidden="true">↘</span></a>
+          <a class="btn btn--ghost" href="#contact">Start a project</a>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-2xl transition group">
-        <img src="./assets/images/image2.png" alt="Portfolio"
-          class="w-full h-56 aspect-video object-cover group-hover:scale-105 transition-transform duration-500">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Portfolio-Project</h3>
-          <p class="text-gray-600 mb-4">A personal portfolio showcasing my projects and skills.</p>
-          <div class="flex gap-2 mb-6 flex-wrap">
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Bootstrap</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="portfolio-project-jade-iota.vercel.app"
-              class="flex items-center justify-center w-full bg-slate-950 hover:bg-slate-800 text-white rounded-md py-2 transition">
-              View Live
-            </a>
-            <a href="https://github.com/HossamEzzat921/Portfolio-project"
-              class="flex items-center justify-center px-6 bg-white border border-gray-300 hover:border-gray-400 rounded-md py-2 transition">
-              Source
-            </a>
-          </div>
+      <dl class="stats reveal" aria-label="Recent work, by the numbers">
+        <div><dt>Products shipped in 2026</dt>
+          <dd data-count="4">4</dd>
         </div>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-2xl transition">
-        <img src="./assets/images/image3.png" alt="Todo App"
-          class="w-full h-56 aspect-video object-cover group-hover:scale-105 transition-transform duration-500">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Todo App</h3>
-          <p class="text-gray-600 mb-4">A simple and effective todo application built with Vue.js.</p>
-          <div class="flex gap-2 mb-6 flex-wrap">
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Vue.js</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Firebase</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="https://todo-app-vue-gilt.vercel.app"
-              class="flex items-center justify-center w-full bg-slate-950 hover:bg-slate-800 text-white rounded-md py-2 transition">
-              View Live
-            </a>
-            <a href="https://github.com/HossamEzzat921/todo-app_vue"
-              class="flex items-center justify-center px-6 bg-white border border-gray-300 hover:border-gray-400 rounded-md py-2 transition">
-              Source
-            </a>
-          </div>
+        <div><dt>Routes &amp; screens built</dt>
+          <dd data-count="97">97</dd>
         </div>
-      </div>
-      <!-- Project Card 4 -->
-      <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-2xl transition group">
-        <img src="./assets/images/image4.png" alt="Todo App"
-          class="w-full h-56 aspect-video object-cover group-hover:scale-105 transition-transform duration-500">
-        <div class="p-6 group-hover:shadow-3xl transition-shadow border-gray-500 duration-500">
-          <h3 class="text-2xl font-semibold mb-3">Meals project</h3>
-          <p class="text-gray-600 mb-4">A meals discovery application featuring recipe search, filters, and detailed
-            meal information using an external API.</p>
-          <div class="flex gap-2 mb-6 flex-wrap">
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Tailwind</span>
-            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="https://meals-project-zeta.vercel.app"
-              class="flex items-center justify-center w-full bg-slate-950 hover:bg-slate-800 text-white rounded-md py-2 transition">
-              View Live
-            </a>
-            <a href="https://github.com/HossamEzzat921/Meals-Project"
-              class="flex items-center justify-center px-6 bg-white border border-gray-300 hover:border-gray-400 rounded-md py-2 transition">
-              Source
-            </a>
-          </div>
+        <div><dt>Database migrations</dt>
+          <dd data-count="57">57</dd>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact">
-
-  </section>
-  <div class="bg-slate-50 py-20">
-    <div class="max-w-2xl mx-auto px-8">
-      <h2 class="text-4xl font-medium text-center mb-4">Get In Touch</h2>
-      <p class="text-gray-600 text-center mb-12">Have a project in mind or want to collaborate? I'd love to hear from
-        you</p>
-
-      <form class="bg-white rounded-lg shadow-2xl p-8 mb-12">
-        <div class="mb-6">
-          <label class="block text-gray-900 font-semibold mb-3">Name</label>
-          <input type="text" placeholder="Your name"
-            class="w-full bg-gray-100 rounded-md px-4 py-3 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
+        <div><dt>Lines of code (last 4 projects)</dt>
+          <dd><span data-count="58">58</span>k</dd>
         </div>
-
-        <div class="mb-6">
-          <label class="block text-gray-900 font-semibold mb-3">Email</label>
-          <input type="email" placeholder="your.email@example.com"
-            class="w-full bg-gray-100 rounded-md px-4 py-3 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
-        </div>
-
-        <div class="mb-8">
-          <label class="block text-gray-900 font-semibold mb-3">Message</label>
-          <textarea placeholder="Tell me about your project..."
-            class="w-full bg-gray-100 rounded-md px-4 py-3 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 h-32 resize-none"></textarea>
-        </div>
-
-        <button type="submit"
-          class="w-full bg-slate-950 hover:bg-slate-800 text-white font-semibold py-3 rounded-md transition">Send
-          Message</button>
-      </form>
-
-      <div class="text-center">
-        <p class="text-gray-600 mb-6">Or reach out directly</p>
-        <div class="flex justify-center gap-8 flex-wrap">
-          <a href="mailto:hello@johndoe.com"
-            class="text-gray-700 hover:text-slate-950 transition">hossamezzat921@gmail.com</a>
-          <span class="text-gray-400">•</span>
-          <a href="tel:+1234567890" class="text-gray-700 hover:text-slate-950 transition">+20 1223176758</a>
-        </div>
-      </div>
-    </div>
+      </dl>
     </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>React</span><b>✦</b><span>TypeScript</span><b>✦</b><span>TanStack Start</span><b>✦</b>
+        <span>Supabase</span><b>✦</b><span>PostgreSQL</span><b>✦</b><span>Node &amp; Express</span><b>✦</b>
+        <span>MongoDB</span><b>✦</b><span>Tailwind</span><b>✦</b><span>Role-based auth</span><b>✦</b>
+        <span>Payments</span><b>✦</b><span>Admin dashboards</span><b>✦</b><span>Vue</span><b>✦</b>
+        <span>React</span><b>✦</b><span>TypeScript</span><b>✦</b><span>TanStack Start</span><b>✦</b>
+        <span>Supabase</span><b>✦</b><span>PostgreSQL</span><b>✦</b><span>Node &amp; Express</span><b>✦</b>
+        <span>MongoDB</span><b>✦</b><span>Tailwind</span><b>✦</b><span>Role-based auth</span><b>✦</b>
+        <span>Payments</span><b>✦</b><span>Admin dashboards</span><b>✦</b><span>Vue</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+      <header class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Selected <em>work</em></h2>
+        <p class="section__lede">Four products from 2026. Each one is a real business problem, end to end —
+          interface, data model, permissions, payments and the admin side nobody sees.</p>
+      </header>
+
+      <!-- Case 01 — WAHY -->
+      <article class="case reveal" style="--tint:#c9a24a" data-case="wahy">
+        <div class="case__media">
+          <img src="./assets/images/work/wahy.webp" alt="WAHY Academy — warm light over an open Quran" loading="lazy"
+            width="1400" height="1050" />
+          <span class="case__badge"><span class="dot dot--live"></span>Live</span>
+        </div>
+        <div class="case__body">
+          <div class="case__top">
+            <span class="case__index">01</span>
+            <span class="mono">EdTech platform · 2026</span>
+          </div>
+          <h3 class="case__title">WAHY Academy <span lang="ar" class="case__ar">وحي</span></h3>
+          <p class="case__pitch">A complete operating system for an online Quran academy: a public site that books
+            trial lessons, and four separate portals — admin, teacher, student and parent — each seeing exactly what
+            they should.</p>
+          <ul class="case__built">
+            <li>Role-based portals with protected routes for 4 user types</li>
+            <li>Teacher availability, lesson booking &amp; schedules</li>
+            <li>Progress tracking and reports parents can follow</li>
+            <li>In-app chat between teachers, students &amp; parents</li>
+            <li>Packages &amp; subscriptions with Vodafone Cash / InstaPay verification</li>
+          </ul>
+          <dl class="case__metrics">
+            <div><dt>Roles</dt><dd>4</dd></div>
+            <div><dt>Routes</dt><dd>51</dd></div>
+            <div><dt>Migrations</dt><dd>39</dd></div>
+            <div><dt>LOC</dt><dd>24k</dd></div>
+          </dl>
+          <ul class="chips">
+            <li>React</li><li>TanStack Start</li><li>TypeScript</li><li>Supabase</li><li>Postgres + RLS</li><li>Tailwind</li>
+          </ul>
+          <div class="case__links">
+            <a class="btn btn--solid" href="https://wahy-quran-academy.vercel.app" target="_blank" rel="noopener">Visit
+              live site ↗</a>
+            <a class="btn btn--ghost" href="https://github.com/HossamEzzat921/wahy-quran-academy" target="_blank"
+              rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 02 — KOVA -->
+      <article class="case case--flip reveal" style="--tint:#ff5a1f" data-case="kova">
+        <div class="case__media case__media--stack">
+          <img src="./assets/images/work/kova.webp" alt="KOVA streetwear campaign — three models in black" loading="lazy"
+            width="1400" height="788" />
+          <div class="case__thumbs">
+            <img src="./assets/images/work/kova-tee.webp" alt="KOVA black tee product shot" loading="lazy" width="700"
+              height="700" />
+            <img src="./assets/images/work/kova-hoodie.webp" alt="KOVA bone hoodie product shot" loading="lazy"
+              width="700" height="700" />
+          </div>
+        </div>
+        <div class="case__body">
+          <div class="case__top">
+            <span class="case__index">02</span>
+            <span class="mono">E-commerce · 2026</span>
+          </div>
+          <h3 class="case__title">KOVA <span class="case__tag">“Wear Your Energy”</span></h3>
+          <p class="case__pitch">A brand-first store for an Egyptian men's streetwear label — built to feel like a
+            fashion brand, not a template — with a full back-office running behind it.</p>
+          <ul class="case__built">
+            <li>Collections, categories, product pages &amp; size guide</li>
+            <li>Cart and checkout with COD, InstaPay &amp; Vodafone Cash</li>
+            <li>Order tracking and a self-serve returns flow</li>
+            <li>Admin: products, inventory, orders, coupons, payments, shipping, returns &amp; content</li>
+          </ul>
+          <dl class="case__metrics">
+            <div><dt>Admin modules</dt><dd>9</dd></div>
+            <div><dt>Routes</dt><dd>31</dd></div>
+            <div><dt>Migrations</dt><dd>15</dd></div>
+            <div><dt>LOC</dt><dd>21k</dd></div>
+          </dl>
+          <ul class="chips">
+            <li>React</li><li>TanStack Start</li><li>TypeScript</li><li>Supabase</li><li>Zod</li><li>shadcn/ui</li>
+          </ul>
+          <div class="case__links">
+            <a class="btn btn--ghost" href="https://github.com/HossamEzzat921/kova-e-commerce-platform" target="_blank"
+              rel="noopener">Source ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 03 — Lalola -->
+      <article class="case reveal" style="--tint:#d8b48a" data-case="lalola">
+        <div class="case__media">
+          <img src="./assets/images/work/lalola.webp" alt="Lalola — a sand-coloured handbag in soft light"
+            loading="lazy" width="1400" height="1050" />
+        </div>
+        <div class="case__body">
+          <div class="case__top">
+            <span class="case__index">03</span>
+            <span class="mono">E-commerce · 2026</span>
+          </div>
+          <h3 class="case__title">Lalola</h3>
+          <p class="case__pitch">Moved an Instagram-only handbag brand onto its own store — a guest checkout as easy as
+            sending a DM, and a dashboard the owner runs without ever calling a developer.</p>
+          <ul class="case__built">
+            <li>Storefront, product pages and wishlist</li>
+            <li>Guest checkout — no account needed to buy</li>
+            <li>Shipping integration with ShipBlu</li>
+            <li>Owner dashboard: products, orders &amp; coupons</li>
+          </ul>
+          <dl class="case__metrics">
+            <div><dt>Routes</dt><dd>15</dd></div>
+            <div><dt>Components</dt><dd>49</dd></div>
+            <div><dt>LOC</dt><dd>9k</dd></div>
+            <div><dt>Checkout</dt><dd>Guest</dd></div>
+          </dl>
+          <ul class="chips">
+            <li>React</li><li>TanStack Start</li><li>Supabase</li><li>Tailwind</li><li>ShipBlu API</li>
+          </ul>
+          <div class="case__links">
+            <a class="btn btn--ghost" href="https://github.com/HossamEzzat921/lalola-style-hub" target="_blank"
+              rel="noopener">Source ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 04 — LearnHub -->
+      <article class="case case--flip reveal" style="--tint:#2fa58a" data-case="learnhub">
+        <div class="case__media">
+          <img src="./assets/images/work/learnhub.webp" alt="LearnHub — a laptop and notebook on a study desk"
+            loading="lazy" width="1074" height="806" />
+        </div>
+        <div class="case__body">
+          <div class="case__top">
+            <span class="case__index">04</span>
+            <span class="mono">LMS · MERN · 2026</span>
+          </div>
+          <h3 class="case__title">LearnHub LMS</h3>
+          <p class="case__pitch">A learning platform connecting students and educators — my own REST API and data
+            model from scratch, under a React front-end.</p>
+          <ul class="case__built">
+            <li>JWT auth with student / educator roles</li>
+            <li>Course builder: sections, lessons &amp; assignments</li>
+            <li>Enrollments, video lessons and progress tracking</li>
+            <li>Educator analytics dashboard</li>
+          </ul>
+          <dl class="case__metrics">
+            <div><dt>API modules</dt><dd>7</dd></div>
+            <div><dt>Data models</dt><dd>6</dd></div>
+            <div><dt>Roles</dt><dd>2</dd></div>
+            <div><dt>Stack</dt><dd>MERN</dd></div>
+          </dl>
+          <ul class="chips">
+            <li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li>
+          </ul>
+          <div class="case__links">
+            <a class="btn btn--ghost" href="https://github.com/HossamEzzat921/LearnHub-LMS" target="_blank"
+              rel="noopener">Source ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Archive -->
+      <div class="archive reveal">
+        <h3 class="archive__title mono">Archive — where it started</h3>
+        <ul class="archive__list" id="archive">
+          <li data-img="./assets/images/work/medisupport.webp">
+            <a href="https://github.com/HossamEzzat921/Medisupport" target="_blank" rel="noopener">
+              <span class="archive__year">2025</span>
+              <span class="archive__name">Medisupport</span>
+              <span class="archive__what">Healthcare support platform — React &amp; Laravel</span>
+              <span class="archive__go">Source ↗</span>
+            </a>
+          </li>
+          <li data-img="./assets/images/work/meals.webp">
+            <a href="https://meals-project-zeta.vercel.app" target="_blank" rel="noopener">
+              <span class="archive__year">2026</span>
+              <span class="archive__name">Meals</span>
+              <span class="archive__what">Recipe discovery on a public API — search &amp; filters</span>
+              <span class="archive__go">Live ↗</span>
+            </a>
+          </li>
+          <li data-img="./assets/images/work/todo.webp">
+            <a href="https://todo-app-vue-gilt.vercel.app" target="_blank" rel="noopener">
+              <span class="archive__year">2025</span>
+              <span class="archive__name">Todo</span>
+              <span class="archive__what">Vue.js + Firebase task manager</span>
+              <span class="archive__go">Live ↗</span>
+            </a>
+          </li>
+          <li data-img="./assets/images/work/portfolio-v1.webp">
+            <a href="https://portfolio-project-jade-iota.vercel.app" target="_blank" rel="noopener">
+              <span class="archive__year">2025</span>
+              <span class="archive__name">Portfolio v1</span>
+              <span class="archive__what">HTML &amp; Bootstrap — the first one</span>
+              <span class="archive__go">Live ↗</span>
+            </a>
+          </li>
+        </ul>
+        <div class="peek" id="peek" aria-hidden="true"><img alt="" /></div>
+      </div>
+    </section>
+
+    <!-- ============ CAPABILITIES ============ -->
+    <section id="capabilities" class="section section--alt">
+      <header class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Skills, <em>with receipts</em></h2>
+        <p class="section__lede">Anyone can list a stack. Pick a skill and see exactly which shipped product
+          proves it.</p>
+      </header>
+
+      <div class="pillars reveal">
+        <div class="pillar">
+          <span class="pillar__n mono">A</span>
+          <h3>Interface engineering</h3>
+          <p>Fast, responsive, accessible UIs with a real visual identity — RTL-aware and built from reusable
+            components, not one-off pages.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__n mono">B</span>
+          <h3>Product systems</h3>
+          <p>The parts that make it a business: auth &amp; roles, booking, checkout, payments, orders, returns and the
+            dashboards to run them.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__n mono">C</span>
+          <h3>Data &amp; backend</h3>
+          <p>Postgres schemas with row-level security on Supabase, REST APIs on Node &amp; Express, MongoDB models —
+            and migrations that keep it all honest.</p>
+        </div>
+      </div>
+
+      <div class="matrix reveal">
+        <div class="matrix__skills" role="group" aria-label="Filter projects by skill" id="skills"></div>
+        <div class="matrix__projects" id="proof">
+          <div class="proof" data-p="wahy"><span class="proof__n">01</span><b>WAHY Academy</b><span
+              class="proof__k mono">EdTech</span></div>
+          <div class="proof" data-p="kova"><span class="proof__n">02</span><b>KOVA</b><span
+              class="proof__k mono">Commerce</span></div>
+          <div class="proof" data-p="lalola"><span class="proof__n">03</span><b>Lalola</b><span
+              class="proof__k mono">Commerce</span></div>
+          <div class="proof" data-p="learnhub"><span class="proof__n">04</span><b>LearnHub</b><span
+              class="proof__k mono">LMS</span></div>
+          <div class="proof" data-p="archive"><span class="proof__n">—</span><b>Archive</b><span
+              class="proof__k mono">Earlier</span></div>
+          <p class="matrix__hint mono" id="hint" aria-live="polite">Select a skill above ↑</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUILD LOG ============ -->
+    <section id="log" class="section">
+      <header class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Build <em>log</em></h2>
+        <p class="section__lede">From first React exercises to platforms real businesses run on. Straight from the
+          commit history.</p>
+      </header>
+      <ol class="log">
+        <li class="reveal"><time>Oct 2026</time><div><b>WAHY Academy goes live</b><span>Four-role academy platform, deployed on Vercel.</span></div></li>
+        <li class="reveal"><time>Sep 2026</time><div><b>KOVA</b><span>Streetwear commerce with a nine-module back-office.</span></div></li>
+        <li class="reveal"><time>Aug 2026</time><div><b>Lalola</b><span>Instagram brand → its own store &amp; dashboard.</span></div></li>
+        <li class="reveal"><time>Jun 2026</time><div><b>LearnHub LMS</b><span>First full MERN product: my own API and data model.</span></div></li>
+        <li class="reveal"><time>Feb 2026</time><div><b>Meals &amp; portfolio rebuild</b><span>Tailwind, public APIs, shipping to Vercel.</span></div></li>
+        <li class="reveal"><time>2025</time><div><b>Vue, Firebase &amp; Medisupport</b><span>Beyond static sites — state, data and a real backend.</span></div></li>
+        <li class="reveal"><time>2023</time><div><b>Hello, React</b><span>Where it started.</span></div></li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <header class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="contact__big">Got a business that needs a <em>real</em> product?</h2>
+      </header>
+
+      <div class="contact__grid">
+        <form class="form reveal" id="contactForm" novalidate>
+          <label>
+            <span class="mono">Your name</span>
+            <input name="name" type="text" autocomplete="name" required placeholder="Jane from Acme" />
+          </label>
+          <label>
+            <span class="mono">Email</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+          </label>
+          <fieldset class="form__type">
+            <legend class="mono">What are we building?</legend>
+            <label><input type="radio" name="type" value="Online store" checked /><span>Online store</span></label>
+            <label><input type="radio" name="type" value="Platform / dashboard" /><span>Platform / dashboard</span></label>
+            <label><input type="radio" name="type" value="Website" /><span>Website</span></label>
+            <label><input type="radio" name="type" value="Something else" /><span>Something else</span></label>
+          </fieldset>
+          <label>
+            <span class="mono">Tell me about it</span>
+            <textarea name="message" rows="4" required placeholder="What it does, who uses it, when you need it…"></textarea>
+          </label>
+          <button class="btn btn--solid btn--wide" type="submit">Send it <span aria-hidden="true">→</span></button>
+          <p class="form__note mono" id="formNote" aria-live="polite"></p>
+        </form>
+
+        <aside class="direct reveal">
+          <p class="mono direct__label">Or reach me directly</p>
+          <button class="direct__email" id="copyEmail" data-email="hossamezzat921@gmail.com">
+            hossamezzat921@gmail.com <span class="mono" id="copyLabel">copy</span>
+          </button>
+          <ul class="direct__links">
+            <li><a href="https://wa.me/201223176758" target="_blank" rel="noopener">WhatsApp <span>+20 122 317 6758</span></a></li>
+            <li><a href="https://www.linkedin.com/in/hossamezzat115" target="_blank" rel="noopener">LinkedIn <span>/in/hossamezzat115</span></a></li>
+            <li><a href="https://github.com/HossamEzzat921" target="_blank" rel="noopener">GitHub <span>@HossamEzzat921</span></a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span lang="ar" class="footer__ar">حسام عزت</span>
+    <span class="mono">Designed &amp; hand-coded by Hossam Ezzat · <span id="year">2026</span></span>
+    <a href="#top" class="mono">Back to top ↑</a>
+  </footer>
+
+  <script src="./main.js" defer></script>
 </body>
 
 </html>
