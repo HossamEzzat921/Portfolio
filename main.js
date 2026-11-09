@@ -14,7 +14,7 @@
     try { localStorage.setItem("he-theme", next); } catch (e) { /* storage unavailable */ }
   });
 
-  /* ---------- Cairo clock ---------- */
+  /* ---------- Local clock (Alexandria, Egypt time) ---------- */
   var clock = document.getElementById("clock");
   var fmt = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Africa/Cairo" });
   function tick() { clock.textContent = fmt.format(new Date()); }
